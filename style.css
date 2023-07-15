@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500;700&family=Bodoni+Moda:wght@400;900&family=Bree+Serif&family=Poppins:wght@400;700&family=Roboto&family=Ubuntu:wght@500&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* utility clasess */
+.max-width1 {
+    max-width: 80vw;
+}
+
+.max-width2 {
+    max-width: 60vw;
+}
+
+.m-auto {
+    margin: auto;
+}
+
+:root {
+    --font1: 'Baloo Bhai 2', cursive;
+    --font2: 'Roboto', sans-serif;
+}
+
+/* normal classes */
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font1);
+    margin-top: 30px;
+
+}
+
+
+.left {
+    display: flex;
+    align-items: center;
+
+}
+
+.left span{
+    font-size: 2rem;
+}
+
+
+ul {
+    display: flex;
+    margin: 0 40px;
+    align-items: center;
+}
+
+
+.left ul li {
+    list-style: none;
+    font-family: var(--font2);
+    margin: 0px 20px;
+}
+
+.left ul li a:hover {
+    color: black;
+    font-weight: bolder;
+}
+
+
+.left ul li a {
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+
+
+.form-input {
+    padding: 4px 6px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-family: var(--font1);
+    width: 60%;
+}
+
+.btn {
+    padding: 4px 20px;
+    font-size: 16px;
+    margin: 0px 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-family: var(--font1);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: brown;
+    color: white;
+}
+
+
+/* navbar completed */
+
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+
+}
+
+.content-left {
+    font-family: var(--font1);
+    max-width: 60%;
+    height: 100%;
+}
+
+.content-right img {
+    width: 400px;
+    height: 350px;
+    border-radius: 100px;
+    border: 2px solid black;
+}
+
+/* content page completed */
+
+.articles-container {
+
+    font-size: var(--font2);
+    margin-top: 20px;
+    width: 100%;
+    /* background-color: rgb(182, 165, 165); */
+    
+}
+
+.articles-container h2{
+    padding-top: 20px;
+    font-family: var(--font2);
+    margin-left: 10px;
+}
+
+.home-article{
+    width: 800px;
+    display: flex;
+    padding: 10px;
+}
+
+.home-article-img img{
+    width: 300px;
+    border: 2px solid black;
+    box-shadow: 1px 1px 1px gray;
+    border-radius: 10px;
+
+
+}
+
+.home-article-content{
+    align-self: center;
+    padding: 0 10px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: black;
+    width: 100%;
+    height: 10vh;
+
+}
+
+
+
+.hamburger{
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    display: none;
+}
+
+.line{
+    width: 30px;
+    height: 4px;
+    margin: 5px;
+    background-color: black;
+}
+
+.home-article-content a{
+    text-decoration: none;
+}
+
+
+/* media queries */
+
+
+@media only screen and (max-width:1000px) {
+    
+    .navigation{
+        flex-direction: column;
+        transition: all .4s ease-in-out;
+        height: 230px;
+   } 
+    
+   ul{
+    flex-direction: column;
+    gap: 25px;
+}
+
+.right{
+    padding: 5px 0;
+    
+   }
+
+   .left{
+    flex-direction: column;
+   }
+
+   .hamburger{
+   display: block;
+   }
+
+   .h-nav{
+    height: 30px;
+   }
+
+   .v-nav{
+    opacity: 0;
+   }
+
+   /* for main-content */
+
+   .content{
+    flex-direction: column;
+    gap: 30px;
+    
+   }
+
+
+   .home-article-content{
+    display: none;
+   }
+
+   .articles-container{
+    max-width: 100%;
+    display: flex;
+       flex-direction: column;
+       align-items: center;
+      justify-content: center;
+   }
+
+   .home-article{
+       max-width: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+      justify-content: center;
+   }   
+
+   .content-left{
+    max-width: 100%;
+    max-height: 80%;
+   }
+
+    .content-right img{
+        overflow: hidden;
+    }
+
+}
+
+
+
